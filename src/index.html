@@ -8,13 +8,70 @@
         @import './styles/index.scss';
     </style>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/main.min.css" rel="stylesheet"></link>
     <script src="./components/calendar.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/main.min.css" rel="stylesheet">
+    </link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body id="main">
-    <div id="calendar-wrapper">
-        <div id='calendar'></div>
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./index.html">
+                <p class="title has-text-primary">Untitled</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Schedule
+                </a>
+
+                <a class="navbar-item">
+                    Course
+                </a>
+
+                <a class="navbar-item">
+                    Tutor
+                </a>
+
+                <a class="navbar-item">
+                    Profile
+                </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="content-wrapper">
+        <div class="buttons">
+            <p class="button is-primary">Add homework</p>
+        </div>
+        <div id="calendar-wrapper">
+            <div id='draggable'></div>
+            <div id='calendar'></div>
+        </div>
     </div>
 </body>
 
