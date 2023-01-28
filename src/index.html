@@ -32,13 +32,38 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
-                    Schedule
-                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Schedule
+                    </a>
 
-                <a class="navbar-item">
-                    Course
-                </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="./index.html">
+                            View Scheldule
+                        </a>
+                        <a class="navbar-item" id="add-homework-btn">
+                            Add Homework
+                        </a>
+                        <a class="navbar-item" id="add-test-quiz-btn">
+                            Add Test/Quiz
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Course
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="./index.html">
+                            View Courses
+                        </a>
+                        <a class="navbar-item" id="add-homework-btn">
+                            Add Course
+                        </a>
+                    </div>
+                </div>
 
                 <a class="navbar-item">
                     Tutor
@@ -65,9 +90,6 @@
         </div>
     </nav>
     <div id="content-wrapper">
-        <div class="buttons">
-            <p class="button is-primary">Add homework</p>
-        </div>
         <div id="calendar-wrapper">
             <div id='draggable'></div>
             <div id='calendar'></div>
