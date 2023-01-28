@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8" />
     <title>JavaScript Starter Kit</title>
     <style>
-        @import './styles/index.scss';
+        @import '../../styles/index.scss';
     </style>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
-    <script src="./components/calendar.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.18/dist/js/bulma-calendar.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.18/dist/css/bulma-calendar.min.css" rel="stylesheet">
@@ -19,10 +18,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
-<body id="main">
+<body>
     <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="./index.html">
+            <a class="navbar-item" href="../../index.html">
                 <p class="title has-text-primary">Untitled</p>
             </a>
 
@@ -42,7 +41,7 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="./index.html">
+                        <a class="navbar-item" href="../../index.html">
                             View Scheldule
                         </a>
                         <a class="navbar-item js-modal-trigger" data-target="homework-modal">
@@ -60,7 +59,7 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="./components/Course/Course.html">
+                        <a class="navbar-item" href="./Course.html">
                             View Courses
                         </a>
                         <a class="navbar-item js-modal-trigger" data-target="course-modal">
@@ -115,12 +114,12 @@
                         <p>Due date:</p>
                     </div>
                     <div class="column is-2" style="text-align:right;">
-                        <input type="date"/>
+                        <input type="date" />
                     </div>
                     <div class="column is-1" style="text-align:right;">
                     </div>
-                    <div class="column is-2"  style="text-align:right;">
-                        <input type="time"/>
+                    <div class="column is-2" style="text-align:right;">
+                        <input type="time" />
                     </div>
                 </div>
                 <div class="columns">
@@ -158,12 +157,12 @@
                         <p>Due date:</p>
                     </div>
                     <div class="column is-2" style="text-align:right;">
-                        <input type="date"/>
+                        <input type="date" />
                     </div>
                     <div class="column is-1" style="text-align:right;">
                     </div>
-                    <div class="column is-2"  style="text-align:right;">
-                        <input type="time"/>
+                    <div class="column is-2" style="text-align:right;">
+                        <input type="time" />
                     </div>
                 </div>
                 <div class="columns">
@@ -201,12 +200,6 @@
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
-    <div id="content-wrapper">
-        <div id="calendar-wrapper">
-            <div id='draggable'></div>
-            <div id='calendar'></div>
-        </div>
-    </div>
     <div>
         <h1 id="Course">Courses</h1>
         <table id="table" border="1">
@@ -224,12 +217,21 @@
             </tbody>
         </table>
         <input type="button" class="input-s" value="Refresh">
-
     </div>
 </body>
+</div>
 
-<script type="module">
-    import './app.js';
-</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
 
 </html>
