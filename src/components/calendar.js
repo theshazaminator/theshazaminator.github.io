@@ -1,3 +1,5 @@
+import { store } from "../store";
+
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.getElementById('calendar');
 
@@ -47,4 +49,29 @@ document.addEventListener('DOMContentLoaded', function () {
             closeAllModals();
         }
     });
+
+    document.getElementById('add-hw-btn').addEventListener('click', () => {
+        const name = document.getElementById('hw-name').value;
+        const date = document.getElementById('hw-date').value;
+        const time = document.getElementById('hw-time').value;
+        const course = document.getElementById('hw-course').value;
+        store.homework.push([name, date, time, course]);
+        console.log(store.homework);
+    });
+
+    document.getElementById('add-test-btn').addEventListener('click', () => {
+        const name = document.getElementById('test-name').value;
+        const date = document.getElementById('test-date').value;
+        const time = document.getElementById('test-time').value;
+        const course = document.getElementById('test-course').value;
+        store.tests.push([name, date, time, course]);
+        console.log(store.tests);
+    });
+
+    document.getElementById('add-course-btn').addEventListener('click', () => {
+        const name = document.getElementById('course-name').value;
+        store.courses.push(name);
+        console.log(store.courses)
+    });
+    
 });
