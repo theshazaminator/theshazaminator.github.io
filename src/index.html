@@ -10,6 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
     <script src="./components/calendar.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.18/dist/js/bulma-calendar.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.18/dist/css/bulma-calendar.min.css" rel="stylesheet">
+    </link>
+
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/main.min.css" rel="stylesheet">
     </link>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -41,10 +45,10 @@
                         <a class="navbar-item" href="./index.html">
                             View Scheldule
                         </a>
-                        <a class="navbar-item" id="add-homework-btn">
+                        <a class="navbar-item js-modal-trigger" data-target="homework-modal">
                             Add Homework
                         </a>
-                        <a class="navbar-item" id="add-test-quiz-btn">
+                        <a class="navbar-item js-modal-trigger" data-target="test-modal">
                             Add Test/Quiz
                         </a>
                     </div>
@@ -59,7 +63,7 @@
                         <a class="navbar-item" href="./index.html">
                             View Courses
                         </a>
-                        <a class="navbar-item" id="add-homework-btn">
+                        <a class="navbar-item js-modal-trigger" data-target="course-modal">
                             Add Course
                         </a>
                     </div>
@@ -89,6 +93,114 @@
             </div>
         </div>
     </nav>
+    <!-- HW popup modal -->
+    <div class="modal" id="homework-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p class="subtitle has-text-centered">New Homework</p>
+                <div class="columns">
+                    <input class="input" type="text" placeholder="Name">
+                    <div class="select is-primary">
+                        <select>
+                            <option>Course</option>
+                            <option>MTH 314</option>
+                            <option>CSE 320</option>
+                            <option>CSE 331</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-7 has-text-primary">
+                        <p>Due date:</p>
+                    </div>
+                    <div class="column is-2" style="text-align:right;">
+                        <input type="date"/>
+                    </div>
+                    <div class="column is-1" style="text-align:right;">
+                    </div>
+                    <div class="column is-2"  style="text-align:right;">
+                        <input type="time"/>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6" style="text-align:right;">
+                        <p class="button is-outlined cancel-btn">Cancel</p>
+                    </div>
+                    <div class="column is-6">
+                        <p class="button is-primary">Add</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Test popup modal -->
+    <div class="modal" id="test-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p class="subtitle has-text-centered">New Test/Quiz</p>
+                <div class="columns">
+                    <input class="input" type="text" placeholder="Name">
+                    <div class="select is-primary">
+                        <select>
+                            <option>Course</option>
+                            <option>MTH 314</option>
+                            <option>CSE 320</option>
+                            <option>CSE 331</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-7 has-text-primary">
+                        <p>Due date:</p>
+                    </div>
+                    <div class="column is-2" style="text-align:right;">
+                        <input type="date"/>
+                    </div>
+                    <div class="column is-1" style="text-align:right;">
+                    </div>
+                    <div class="column is-2"  style="text-align:right;">
+                        <input type="time"/>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6" style="text-align:right;">
+                        <p class="button is-outlined cancel-btn">Cancel</p>
+                    </div>
+                    <div class="column is-6">
+                        <p class="button is-primary">Add</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Course popup modal -->
+    <div class="modal" id="course-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p class="subtitle has-text-centered">New Course</p>
+                <div class="columns">
+                    <input class="input" type="text" placeholder="Name">
+                </div>
+                <div class="columns">
+                    <div class="column is-6" style="text-align:right;">
+                        <p class="button is-outlined cancel-btn">Cancel</p>
+                    </div>
+                    <div class="column is-6">
+                        <p class="button is-primary">Add</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
     <div id="content-wrapper">
         <div id="calendar-wrapper">
             <div id='draggable'></div>
