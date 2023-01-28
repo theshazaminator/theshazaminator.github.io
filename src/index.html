@@ -7,10 +7,15 @@
     <style>
         @import './styles/index.scss';
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/main.min.css" rel="stylesheet"></link>
+    <script src="./components/calendar.js"></script>
 </head>
 
-<body>
-    <div id="root"></div>
+<body id="main">
+    <div id="calendar-wrapper">
+        <div id='calendar'></div>
+    </div>
 </body>
 
 <script type="module">
