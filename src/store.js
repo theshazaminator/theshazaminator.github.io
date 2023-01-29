@@ -23,6 +23,7 @@ export const load = () => {
         if (snapshot.exists()) {
             store = JSON.parse(snapshot.val().rawData);
         }
+        console.log(store)
         loadAll();
         updateCourses();
     }).catch((error) => {

@@ -3,7 +3,7 @@ import { load, store, upload } from "../store";
 import { addingEvent } from "./calendar.js";
 import { loadCourses } from "./Course/course.js";
 
-function openModal($el) {
+export function openModal($el) {
     $el.classList.add('is-active');
 }
 
@@ -19,7 +19,7 @@ function closeAllModals() {
 
 // Add a click event on buttons to open a specific modal
 (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
+    let modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
 
     $trigger.addEventListener('click', () => {
@@ -50,8 +50,8 @@ document.getElementById('add-hw-btn').addEventListener('click', () => {
     const date = document.getElementById('hw-date').value;
     const time = document.getElementById('hw-time').value;
     const course = document.getElementById('hw-course').value;
-    store.homework.push([name, date, time, course]);
-    addingEvent(name, date);
+    store.homework.push([name, date, time, course, 'in-progress', store.homework.length]);
+    addingEvent(store.homework[store.homework.length - 1], 'hw');
     upload();
 });
 
@@ -60,8 +60,8 @@ document.getElementById('add-test-btn').addEventListener('click', () => {
     const date = document.getElementById('test-date').value;
     const time = document.getElementById('test-time').value;
     const course = document.getElementById('test-course').value;
-    store.tests.push([name, date, time, course]);
-    addingEvent(name, date);
+    store.tests.push([name, date, time, course, 'in-progress', store.tests.length]);
+    addingEvent(store.tests[store.tests.length - 1], 'test');
     upload()
 });
 
@@ -78,11 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 export const updateCourses = (all = true) => {
     let courses = [store.courses[store.courses.length - 1]];
-    console.log(courses)
     if (all) {
         courses = store.courses;
     }
-    loadCourses(courses);
+    try {
+        loadCourses(courses);
+    } catch {
+        
+    }
     const coursesSelection = document.getElementsByTagName('select');
 
     for (let selection of coursesSelection) {
