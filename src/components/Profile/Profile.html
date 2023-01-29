@@ -59,7 +59,7 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="./Course.html">
+                        <a class="navbar-item" href="../Course/Course.html">
                             View Courses
                         </a>
                         <a class="navbar-item js-modal-trigger" data-target="course-modal">
@@ -72,7 +72,7 @@
                     Tutor
                 </a>
 
-                <a class="navbar-item">
+                <a class="navbar-item" href="./Profile.html">
                     Profile
                 </a>
 
@@ -99,13 +99,13 @@
             <div class="box">
                 <p class="subtitle has-text-centered">New Homework</p>
                 <div class="columns">
-                    <input class="input" type="text" placeholder="Name">
+                    <input class="input" type="text" placeholder="Name" id="hw-name">
                     <div class="select is-primary">
-                        <select>
+                        <select id="hw-course">
                             <option>Course</option>
-                            <option>MTH 314</option>
-                            <option>CSE 320</option>
-                            <option>CSE 331</option>
+                            <option value="MTH 314">MTH 314</option>
+                            <option value="CSE 320">CSE 320</option>
+                            <option value="CSE 331">CSE 331</option>
                         </select>
                     </div>
                 </div>
@@ -114,12 +114,12 @@
                         <p>Due date:</p>
                     </div>
                     <div class="column is-2" style="text-align:right;">
-                        <input type="date" />
+                        <input type="date" id="hw-date" />
                     </div>
                     <div class="column is-1" style="text-align:right;">
                     </div>
                     <div class="column is-2" style="text-align:right;">
-                        <input type="time" />
+                        <input type="time" id="hw-time" />
                     </div>
                 </div>
                 <div class="columns">
@@ -127,7 +127,7 @@
                         <p class="button is-outlined cancel-btn">Cancel</p>
                     </div>
                     <div class="column is-6">
-                        <p class="button is-primary">Add</p>
+                        <p class="button is-primary cancel-btn" id="add-hw-btn">Add</p>
                     </div>
                 </div>
             </div>
@@ -142,13 +142,13 @@
             <div class="box">
                 <p class="subtitle has-text-centered">New Test/Quiz</p>
                 <div class="columns">
-                    <input class="input" type="text" placeholder="Name">
+                    <input class="input" type="text" placeholder="Name" id="test-name">
                     <div class="select is-primary">
-                        <select>
+                        <select id="test-course">
                             <option>Course</option>
-                            <option>MTH 314</option>
-                            <option>CSE 320</option>
-                            <option>CSE 331</option>
+                            <option value="MTH 314">MTH 314</option>
+                            <option value="CSE 320">CSE 320</option>
+                            <option value="CSE 331">CSE 331</option>
                         </select>
                     </div>
                 </div>
@@ -157,12 +157,12 @@
                         <p>Due date:</p>
                     </div>
                     <div class="column is-2" style="text-align:right;">
-                        <input type="date" />
+                        <input type="date" id="test-date" />
                     </div>
                     <div class="column is-1" style="text-align:right;">
                     </div>
                     <div class="column is-2" style="text-align:right;">
-                        <input type="time" />
+                        <input type="time" id="test-time" />
                     </div>
                 </div>
                 <div class="columns">
@@ -170,7 +170,7 @@
                         <p class="button is-outlined cancel-btn">Cancel</p>
                     </div>
                     <div class="column is-6">
-                        <p class="button is-primary">Add</p>
+                        <p class="button is-primary cancel-btn cancel-btn" id="add-test-btn">Add</p>
                     </div>
                 </div>
             </div>
@@ -185,14 +185,14 @@
             <div class="box">
                 <p class="subtitle has-text-centered">New Course</p>
                 <div class="columns">
-                    <input class="input" type="text" placeholder="Name">
+                    <input class="input" id="course-name" type="text" placeholder="Name">
                 </div>
                 <div class="columns">
                     <div class="column is-6" style="text-align:right;">
                         <p class="button is-outlined cancel-btn">Cancel</p>
                     </div>
                     <div class="column is-6">
-                        <p class="button is-primary">Add</p>
+                        <p class="button is-primary cancel-btn" id="add-course-btn">Add</p>
                     </div>
                 </div>
             </div>
@@ -202,5 +202,10 @@
 
 
 </body>
+
+<script type="module">
+    import '../calendar.js';
+    import '../navbar.js';
+</script>
 
 </html>
