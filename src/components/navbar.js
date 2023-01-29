@@ -1,4 +1,4 @@
-import { store } from "../store";
+import { store, upload } from "../store";
 
 function openModal($el) {
     $el.classList.add('is-active');
@@ -49,6 +49,7 @@ document.getElementById('add-hw-btn').addEventListener('click', () => {
     const course = document.getElementById('hw-course').value;
     store.homework.push([name, date, time, course]);
     console.log(store.homework);
+    upload();
 });
 
 document.getElementById('add-test-btn').addEventListener('click', () => {

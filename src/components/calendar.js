@@ -1,3 +1,5 @@
+import { load } from '../store';
+
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.getElementById('calendar');
 
@@ -5,4 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         initialView: 'dayGridMonth'
     });
     calendar.render();
+
+    load();
 });
