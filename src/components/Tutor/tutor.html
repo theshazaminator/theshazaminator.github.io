@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8" />
-    <title>Untitled</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title>Responsive Card Slider</title>-->
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <title>JavaScript Starter Kit</title>
     <style>
-        @import './styles/index.scss';
+        @import '../../styles/index.scss';
     </style>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
 
@@ -16,14 +22,12 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/main.min.css" rel="stylesheet">
     </link>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
-<body id="main">
-    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+<body id="ProfileA">
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation" id="ProfileB">
         <div class="navbar-brand">
-            <a class="navbar-item" href="./index.html">
+            <a class="navbar-item" href="../../index.html">
                 <p class="title has-text-primary">Untitled</p>
             </a>
 
@@ -43,7 +47,7 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="./index.html">
+                        <a class="navbar-item" href="../../index.html">
                             View Scheldule
                         </a>
                         <a class="navbar-item js-modal-trigger" data-target="homework-modal">
@@ -61,7 +65,7 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="./components/Course/Course.html">
+                        <a class="navbar-item" href="../Course/Course.html">
                             View Courses
                         </a>
                         <a class="navbar-item js-modal-trigger" data-target="course-modal">
@@ -70,11 +74,11 @@
                     </div>
                 </div>
 
-                <a class="navbar-item" href="./components/Tutor/tutor.html">
+                <a class="navbar-item" href="../Tutor/tutor.html">
                     Tutor
                 </a>
 
-                <a class="navbar-item" href="./components/Profile/Profile.html">
+                <a class="navbar-item" href="../Profile/Profile.html">
                     Profile
                 </a>
 
@@ -196,47 +200,120 @@
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
-    <!-- Event popup modal -->
-    <div class="modal" id="event-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box">
-                <p class="subtitle has-text-centered has-text-link" id="event-name">MTH 314 - Quiz 1</p>
-                <div class="columns">
-                    <div class="column">
-                        <p class="subtitle">Due date:</p>
+    <!--Carousel-->
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="./Photos/360_F_219633151_BW6TD8D1EA9OqZu4JgdmeJGg4JBaiAHj.jpg" alt=""
+                                class="card-img">
+                        </div>
                     </div>
-                    <div class="column">
-                        <p class="has-text-primary subtitle" style="text-align:right;" id="event-date">1/1/2023 - 12:00 AM</p>
+
+                    <div class="card-content">
+                        <h2 class="name">George Vernon</h2>
+                        <p class="description">I am MSU Grad in Mathematics. I love watching Marvels movies and learning
+                            about
+                            mathematical theroms. I find teaching more fun then a job!
+                        </p>
+
+                        <button class="button">View Availability</button>
                     </div>
                 </div>
-                <div class="columns">
-                    <div class="column is-6" style="text-align:right;">
-                        <p class="button is-outlined cancel-btn">Close</p>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="./Photos/360_F_432896398_99o08tTgBYj8YP2eatvF4zaJu3AdF40E.jpg" alt=""
+                                class="card-img">
+                        </div>
                     </div>
-                    <div class="column is-6">
-                        <p class="button is-primary cancel-btn" id="event-save-btn">Mark as Completed</p>
+
+                    <div class="card-content">
+                        <h2 class="name">Rami Patel</h2>
+                        <p class="description">I am Wayne State Grad in Mathematics and Physics. I love looking up at
+                            the stars
+                            and admiring my students process throughout the generations.
+                        </p>
+
+                        <button class="button">View Availability</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="./Photos/istockphoto-1280113805-612x612.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Racheal Evergarden</h2>
+                        <p class="description">I am SchoolCraft graduate in Computer Science and Mathematics. I love
+                            reading books
+                            especially fiction. I always see my students as second family!
+                        </p>
+
+                        <button class="button">View Availability</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="./Photos/istockphoto-1355110818-612x612.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Villa</h2>
+                        <p class="description">I am High School teacher looking for a side hustle. Love the Detroit
+                            hustle life and exploring Detroit. I also respect
+                            the students who grind!
+                        </p>
+
+                        <button class="button">View Availability</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="./Photos/download.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Diglet</h2>
+                        <p class="description">I known Earth Essential Science like the back of my hand. That's if I had
+                            any.
+                            Im one to drive passion in my students to grow and for them to love the earth!
+                        </p>
+
+                        <button class="button">View Availability</button>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
     </div>
 
-    <div class="has-text-centered mt-5">
-        <p class="title has-text-link">Schedule</p>
-    </div>
 
-    <div id="content-wrapper">
-        <div id="calendar-wrapper">
-            <div id='draggable'></div>
-            <div id='calendar'></div>
-        </div>
-    </div>
+
 </body>
 
-<script type="module">
-    import './components/calendar.js';
-    import './components/navbar.js';</script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </html>
