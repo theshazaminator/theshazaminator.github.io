@@ -1,8 +1,8 @@
-var qs = require('qs');
+const qs = require('qs');
+const path = require('path')
 
 export const send = async (msg, receiver) => {
     const url = "https://api.twilio.com/2010-04-01/Accounts/AC06a96291fab11cf706b7f7f8cce95ec5/Messages.json";
-
 
     await(axios.post(url, qs.stringify({
         Body: msg,
@@ -11,7 +11,7 @@ export const send = async (msg, receiver) => {
       }), {
         auth: {
           username: "AC06a96291fab11cf706b7f7f8cce95ec5",
-          password: "5eb86c0ca5c58b03b67a09d72860b430"
+          password: process.env.TOKEN
         }
       }));
 }
