@@ -41,18 +41,35 @@
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@parcel/transformer-sass": "^2.7.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
     "node-sass": "^7.0.1",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.7.0",
+    "path-browserify": "^1.0.1",
     "prettier": "^2.7.1",
-    "rimraf": "^3.0.2"
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "rimraf": "^3.0.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
   },
   "dependencies": {
     "bulma": "^0.9.4",
-    "lodash": "^4.17.21"
+    "dotenv": "^16.0.3",
+    "firebase": "^9.16.0",
+    "lodash": "^4.17.21",
+    "qs": "^6.11.0",
+    "twilio": "^3.84.1"
   }
 }
