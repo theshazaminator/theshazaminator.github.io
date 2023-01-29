@@ -11,7 +11,7 @@ function closeModal($el) {
     $el.classList.remove('is-active');
 }
 
-function closeAllModals() {
+export function closeAllModals() {
     (document.querySelectorAll('.modal') || []).forEach(($modal) => {
         closeModal($modal);
     });
@@ -67,7 +67,7 @@ document.getElementById('add-test-btn').addEventListener('click', () => {
 
 document.getElementById('add-course-btn').addEventListener('click', () => {
     const name = document.getElementById('course-name').value;
-    store.courses.push(name);
+    store.courses.push([name, store.courses.length, [], 0, 0]);
     upload();
     updateCourses(false);
 });
@@ -90,7 +90,7 @@ export const updateCourses = (all = true) => {
 
     for (let selection of coursesSelection) {
         for (let course of courses) {
-            selection.options[selection.options.length] = new Option(course, course);
+            selection.options[selection.options.length] = new Option(course[0], course[0]);
         }
     }
 }
