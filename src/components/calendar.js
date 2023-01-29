@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         initialView: 'dayGridMonth'
     });
     calendar.render();
-
-    load();
 });
 
 export function addingEvent(course, date) {

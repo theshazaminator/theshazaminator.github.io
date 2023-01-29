@@ -1,5 +1,5 @@
 import { send } from "../notification";
-import { store, upload } from "../store";
+import { load, store, upload } from "../store";
 import { addingEvent } from "./calendar.js";
 
 function openModal($el) {
@@ -68,4 +68,24 @@ document.getElementById('add-course-btn').addEventListener('click', () => {
     const name = document.getElementById('course-name').value;
     store.courses.push(name);
     upload();
+    updateCourses(false);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    load();
+});
+
+export const updateCourses = (all = true) => {
+    let courses = [store.courses[store.courses.length - 1]];
+    console.log(courses)
+    if (all) {
+        courses = store.courses;
+    }
+    const coursesSelection = document.getElementsByTagName('select');
+
+    for (let selection of coursesSelection) {
+        for (let course of courses) {
+            selection.options[selection.options.length] = new Option(course, course);
+        }
+    }
+}
