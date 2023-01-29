@@ -1,6 +1,7 @@
 import { send } from "../notification";
 import { load, store, upload } from "../store";
 import { addingEvent } from "./calendar.js";
+import { loadCourses } from "./Course/course.js";
 
 function openModal($el) {
     $el.classList.add('is-active');
@@ -81,6 +82,7 @@ export const updateCourses = (all = true) => {
     if (all) {
         courses = store.courses;
     }
+    loadCourses(courses);
     const coursesSelection = document.getElementsByTagName('select');
 
     for (let selection of coursesSelection) {

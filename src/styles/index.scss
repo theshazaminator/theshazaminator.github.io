@@ -69,18 +69,18 @@ body {
 
 }
 
-#table2 {
+.table2 {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   border-collapse: separate;
   border-radius: 5px;
-  background-color: rgb(18, 209, 178);
-  width: 1000;
-  height: 400;
-
+  width: 80vw;
 }
 
+td {
+  height: 50px;
+}
 
 
 #yellow {
