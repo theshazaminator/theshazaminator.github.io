@@ -78,10 +78,8 @@ export function loadCourses(courses) {
                     total += a * score[1];
                     expected += b * score[1];
                 }
-                console.log(total)
                 store.courses[course[1]][3] = total;
                 store.courses[course[1]][4] = expected;
-                console.log(store);
                 upload();
 
                 window.location.href = './Course.html';

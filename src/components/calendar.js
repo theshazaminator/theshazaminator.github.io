@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         eventClick: function (info) {
-            console.log(info.event)
             const data = info.event;
             const $target = document.getElementById('event-modal');
             openModal($target);
@@ -37,7 +36,6 @@ export function addingEvent(course, type) {
     if (course[4] === 'completed') {
         color = 'grey';
     }
-    console.log(type, color)
     let event = {
         id: course[5],
         title: course[3] + ' - ' + course[0],
