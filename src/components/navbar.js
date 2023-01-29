@@ -60,9 +60,11 @@ document.getElementById('add-test-btn').addEventListener('click', () => {
     const course = document.getElementById('test-course').value;
     store.tests.push([name, date, time, course]);
     addingEvent(name, date);
+    upload()
 });
 
 document.getElementById('add-course-btn').addEventListener('click', () => {
     const name = document.getElementById('course-name').value;
     store.courses.push(name);
+    upload();
 });
