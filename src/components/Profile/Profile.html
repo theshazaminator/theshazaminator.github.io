@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
-<body>
-    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+<body id="ProfileA">
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation" id="ProfileB">
         <div class="navbar-brand">
             <a class="navbar-item" href="../../index.html">
                 <p class="title has-text-primary">Untitled</p>
@@ -193,6 +193,53 @@
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
+    <!--Profile Pic-->
+    <div>
+        <h1 id="headshot">Tic Tac</h1>
+        <figure class="image is-128x128">
+            <img class="is-rounded" src="profile.png" id="Profilepic">
+    </div>
+    <div class="file is-primary" id="ProfileButton0">
+        <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+                <span class="file-label">
+                    Primary file…
+                </span>
+            </span>
+        </label>
+    </div>
+    <!-- Full Name Information-->
+    <div class="box" id="Pbox1">
+        <div class="field">
+            <label class="label" id="FullName">Full Name</label>
+            <div class="control">
+                <input class="input" type="email" value="Shawzub Raza" id="FullName">
+            </div>
+        </div>
+    </div>
+    <!-- Email Information-->
+    <div class="box" id="Pbox2">
+        <div class="field">
+            <label class="label" id="FullName">Email</label>
+            <div class="control">
+                <input class="input" type="email" value="Tictac@msu.edu" id="FullName">
+            </div>
+        </div>
+    </div>
+    <!--Subscription Plan-->
+    <div class="box" id="Pbox1">
+        <div class="field">
+            <label class="label" id="FullName">Phone Number</label>
+            <div class="control">
+                <input class="input" type="email" value="313-500-5151" id="FullName">
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 
 </body>
@@ -200,6 +247,7 @@
 <script type="module">
     import '../calendar.js';
     import '../navbar.js';
+    import '../profile.js'
 </script>
 
 </html>
