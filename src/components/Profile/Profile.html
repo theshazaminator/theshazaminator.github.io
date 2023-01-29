@@ -81,12 +81,12 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                            Log in
-                        </a>
+                        <button class="js-modal-trigger button is-primary" data-target="modal-js-example">
+                            Sign Up
+                        </button>
+                        <button class="js-modal-trigger button is-light" data-target="modal-js-examples">
+                            Login
+                        </button>
                     </div>
                 </div>
             </div>
@@ -236,8 +236,75 @@
                 <input class="input" type="email" value="313-500-5151" id="FullName">
             </div>
         </div>
+        <!--Sign Up Modal-->
+    </div>
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <form class="box">
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" placeholder="e.g. alex@example.com">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="********">
+                        </div>
+                        <label class="label">Retype Password</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="********">
+                        </div>
+                    </div>
+
+                    <button class="button is-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!--Login Modal-->
+    </div>
+    <div id="modal-js-examples" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <form class="box">
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" placeholder="e.g. alex@example.com">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="********">
+                        </div>
+                    </div>
+
+                    <button class="button is-primary">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
     </div>
 </body>
+
+<script>
+    document.getElementById("button").addEventListener('click', function () {
+        document.querySelector(".popup").style.display = "flex";
+    })
+</script>
 
 <script type="module">
     import '../calendar.js';
