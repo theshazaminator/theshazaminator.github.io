@@ -1,4 +1,5 @@
 import { store, upload } from "../store";
+import { addingEvent } from "./calendar.js";
 
 function openModal($el) {
     $el.classList.add('is-active');
@@ -48,7 +49,7 @@ document.getElementById('add-hw-btn').addEventListener('click', () => {
     const time = document.getElementById('hw-time').value;
     const course = document.getElementById('hw-course').value;
     store.homework.push([name, date, time, course]);
-    console.log(store.homework);
+    addingEvent(name, date);
     upload();
 });
 
@@ -58,11 +59,10 @@ document.getElementById('add-test-btn').addEventListener('click', () => {
     const time = document.getElementById('test-time').value;
     const course = document.getElementById('test-course').value;
     store.tests.push([name, date, time, course]);
-    console.log(store.tests);
+    addingEvent(name, date);
 });
 
 document.getElementById('add-course-btn').addEventListener('click', () => {
     const name = document.getElementById('course-name').value;
     store.courses.push(name);
-    console.log(store.courses)
 });

@@ -1,12 +1,23 @@
 import { load } from '../store';
 
+let calendar;
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.getElementById('calendar');
 
-    let calendar = new FullCalendar.Calendar(calendarEl, {
+    calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth'
     });
     calendar.render();
 
     load();
 });
+
+export function addingEvent(course, date) {
+    let event = {
+        id: 'a',
+        title: course,
+        start: date
+    }
+    calendar.addEvent(event)
+    console.log(date)
+}
