@@ -16,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/main.min.css" rel="stylesheet">
     </link>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
@@ -194,14 +196,92 @@
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
+    <!-- Course view popup modal -->
+    <div class="modal" id="course-view-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p class="has-text-centered has-text-link title has-text-weight-semibold" id="course-name-t">
+                </p>
+                <div class="has-text-centered">
+                    <p class="button is-primary is-light" id="add-component-btn">Add Component</p>
+                </div>
+                <div>
+                    <table class="table table2" id="components-table">
+                        <thead>
+                            <tr>
+                                <th class="has-text-centered">Name</th>
+                                <th class="has-text-centered">Weight (%)</th>
+                                <th class="has-text-centered">Score</th>
+                                <th class="has-text-centered">Out of</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="columns">
+                    <div class="column is-6" style="text-align:right;">
+                        <p class="button is-outlined cancel-btn"  id="cc-btn">Cancel</p>
+                    </div>
+                    <div class="column is-6">
+                        <p class="button is-primary cancel-btn" id="ccc-btn">Save</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Component modal -->
+    <div class="modal" id="component-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p class="subtitle has-text-centered has-text-link">New Component</p>
+                <div class="columns">
+                    <div class="column">
+                        <p class="subtitle has-text-weight-semibold">Name: </p>
+                    </div>
+                    <div class="column">
+                        <input class="input is-primary" id="component-name"/>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <p class="subtitle has-text-weight-semibold">Quantity: </p>
+                    </div>
+                    <div class="column">
+                        <input class="input is-primary" type="number" id="component-quantity"/>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <p class="subtitle has-text-weight-semibold">Weight(%): </p>
+                    </div>
+                    <div class="column">
+                        <input class="input is-primary" type="number" id="component-weight"/>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6" style="text-align:right;">
+                        <p class="button is-outlined cancel-btn">Cancel</p>
+                    </div>
+                    <div class="column is-6">
+                        <p class="button is-primary cancel-btn" id="component-btn">Add</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
     <div class="has-text-centered mt-5">
         <p class="title has-text-link">Courses</p>
         <table class="table table2 is-striped">
             <thead id="black">
                 <th class="has-text-centered">ID</th>
                 <th class="has-text-centered">Course</th>
-                <th class="has-text-centered">Grade</th>
-                <th class="has-text-centered">Percentage</th>
+                <th class="has-text-centered">Percentage (%)</th>
+                <th class="has-text-centered"></th>
             </thead>
             <tbody id="courses-table">
             </tbody>

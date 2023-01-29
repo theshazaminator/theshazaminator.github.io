@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('event-name').textContent = data.title;
             document.getElementById('event-date').textContent = data.startStr;
             document.getElementById('event-save-btn').addEventListener('click', () => {
-                console.log(data.id, store)
                 if (info.el.style.backgroundColor == 'red') {
                     store.tests[data.id][4] = 'completed';
                 } else if (info.el.style.backgroundColor == 'blue') {
